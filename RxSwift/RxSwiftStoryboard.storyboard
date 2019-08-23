@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vVe-wr-ahm">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Rx Swift View Controller-->
+        <scene sceneID="1re-KA-Lwx">
+            <objects>
+                <viewController id="vVe-wr-ahm" customClass="RxSwiftViewController" customModule="CustomPopups" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SnG-Bw-Wch">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4mr-tF-K5f">
+                                <rect key="frame" x="20" y="184" width="374" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="wt4-wd-vBx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tJT-26-JqB">
+                                <rect key="frame" x="16" y="299" width="382" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="dN3-6Y-xlr"/>
+                                </constraints>
+                                <state key="normal" title="Select Date"/>
+                                <connections>
+                                    <segue destination="qHh-VE-6Gm" kind="presentation" identifier="toPopup" id="Dwe-JK-Q5P"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="azY-cg-lE1">
+                                <rect key="frame" x="20" y="718" width="374" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="AYU-fG-Ecp"/>
+                                </constraints>
+                                <state key="normal" title="Dismiss"/>
+                                <connections>
+                                    <action selector="dismissButton:" destination="vVe-wr-ahm" eventType="touchUpInside" id="9oY-DF-iFE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96470588239999999" green="0.51764705879999995" blue="0.043137254899999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="mfR-mv-coj" firstAttribute="trailing" secondItem="azY-cg-lE1" secondAttribute="trailing" constant="20" id="0G6-oj-0Vj"/>
+                            <constraint firstItem="4mr-tF-K5f" firstAttribute="top" secondItem="mfR-mv-coj" secondAttribute="top" constant="140" id="0hj-Q5-9K1"/>
+                            <constraint firstItem="mfR-mv-coj" firstAttribute="trailing" secondItem="tJT-26-JqB" secondAttribute="trailing" constant="16" id="6NF-yF-tCX"/>
+                            <constraint firstItem="mfR-mv-coj" firstAttribute="bottom" secondItem="azY-cg-lE1" secondAttribute="bottom" constant="89" id="8dG-fl-cMr"/>
+                            <constraint firstItem="tJT-26-JqB" firstAttribute="top" secondItem="4mr-tF-K5f" secondAttribute="bottom" constant="54" id="A9H-wI-MtM"/>
+                            <constraint firstItem="tJT-26-JqB" firstAttribute="leading" secondItem="mfR-mv-coj" secondAttribute="leading" constant="16" id="BdD-zl-txC"/>
+                            <constraint firstItem="4mr-tF-K5f" firstAttribute="leading" secondItem="mfR-mv-coj" secondAttribute="leading" constant="20" id="kUx-zj-wyX"/>
+                            <constraint firstItem="mfR-mv-coj" firstAttribute="trailing" secondItem="4mr-tF-K5f" secondAttribute="trailing" constant="20" id="qGE-f2-Eup"/>
+                            <constraint firstItem="azY-cg-lE1" firstAttribute="leading" secondItem="mfR-mv-coj" secondAttribute="leading" constant="20" id="vXY-oU-Pi8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mfR-mv-coj"/>
+                    </view>
+                    <connections>
+                        <outlet property="dateTimeLabel" destination="4mr-tF-K5f" id="5QI-ig-JKK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cWr-qe-Cgb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-26.086956521739133" y="95.758928571428569"/>
+        </scene>
+        <!--PopupStoryboard-->
+        <scene sceneID="GSE-5h-YZT">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PopupStoryboard" id="qHh-VE-6Gm" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kLE-4r-u4N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="747" y="23"/>
+        </scene>
+    </scenes>
+</document>

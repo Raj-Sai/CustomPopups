@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="h8w-aM-AcP">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Third View Controller-->
+        <scene sceneID="7dr-Q3-Oth">
+            <objects>
+                <viewController id="h8w-aM-AcP" customClass="ThirdViewController" customModule="CustomPopups" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CQS-mF-gbd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zmb-ae-1Id">
+                                <rect key="frame" x="20" y="194" width="374" height="79"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="79" id="9ZQ-Rt-Lwh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LAT-47-xfa">
+                                <rect key="frame" x="16" y="304" width="382" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="FEB-kt-16h"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Select Date"/>
+                                <connections>
+                                    <segue destination="3sn-FM-h4v" kind="presentation" identifier="toPopup" id="abG-Kl-bNb"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CallBack" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jlD-Py-DWm">
+                                <rect key="frame" x="20" y="403.5" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="bdV-Uk-d5j"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Closures are self-contained blocks of functionality that can be passed around and used in your code." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8zG-Xe-q7z">
+                                <rect key="frame" x="20" y="469.5" width="374" height="61"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ko-V5-Ymm">
+                                <rect key="frame" x="16" y="731" width="382" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="TIt-H4-3aT"/>
+                                </constraints>
+                                <state key="normal" title="Navigate Closure"/>
+                                <connections>
+                                    <segue destination="U5M-4l-sda" kind="presentation" id="Zi5-1o-m7F"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LAT-47-xfa" firstAttribute="leading" secondItem="NSO-si-AgF" secondAttribute="leading" constant="16" id="0Ci-Pn-zKn"/>
+                            <constraint firstItem="jlD-Py-DWm" firstAttribute="centerY" secondItem="NSO-si-AgF" secondAttribute="centerY" id="7Yj-4u-b7x"/>
+                            <constraint firstItem="NSO-si-AgF" firstAttribute="bottom" secondItem="6Ko-V5-Ymm" secondAttribute="bottom" constant="32" id="DkS-p0-Pud"/>
+                            <constraint firstItem="zmb-ae-1Id" firstAttribute="leading" secondItem="NSO-si-AgF" secondAttribute="leading" constant="20" id="EeW-kT-8pS"/>
+                            <constraint firstItem="jlD-Py-DWm" firstAttribute="leading" secondItem="NSO-si-AgF" secondAttribute="leading" constant="20" id="IdM-WN-KP7"/>
+                            <constraint firstItem="zmb-ae-1Id" firstAttribute="top" secondItem="NSO-si-AgF" secondAttribute="top" constant="150" id="QZG-s8-uag"/>
+                            <constraint firstItem="NSO-si-AgF" firstAttribute="trailing" secondItem="6Ko-V5-Ymm" secondAttribute="trailing" constant="16" id="TB9-90-tdR"/>
+                            <constraint firstItem="6Ko-V5-Ymm" firstAttribute="leading" secondItem="NSO-si-AgF" secondAttribute="leading" constant="16" id="UOg-tS-3KS"/>
+                            <constraint firstItem="NSO-si-AgF" firstAttribute="trailing" secondItem="zmb-ae-1Id" secondAttribute="trailing" constant="20" id="VsL-wY-ulg"/>
+                            <constraint firstItem="LAT-47-xfa" firstAttribute="top" secondItem="zmb-ae-1Id" secondAttribute="bottom" constant="31" id="Z3I-hM-WSk"/>
+                            <constraint firstItem="NSO-si-AgF" firstAttribute="trailing" secondItem="8zG-Xe-q7z" secondAttribute="trailing" constant="20" id="awx-ra-8oT"/>
+                            <constraint firstItem="8zG-Xe-q7z" firstAttribute="top" secondItem="jlD-Py-DWm" secondAttribute="bottom" constant="16" id="bwp-uH-S6K"/>
+                            <constraint firstItem="NSO-si-AgF" firstAttribute="trailing" secondItem="LAT-47-xfa" secondAttribute="trailing" constant="16" id="gGx-mO-C06"/>
+                            <constraint firstItem="jlD-Py-DWm" firstAttribute="centerX" secondItem="NSO-si-AgF" secondAttribute="centerX" id="j2T-zV-GEu"/>
+                            <constraint firstItem="8zG-Xe-q7z" firstAttribute="leading" secondItem="NSO-si-AgF" secondAttribute="leading" constant="20" id="oq2-Sn-gRF"/>
+                            <constraint firstItem="NSO-si-AgF" firstAttribute="trailing" secondItem="jlD-Py-DWm" secondAttribute="trailing" constant="20" id="sel-oM-VDA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="NSO-si-AgF"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="recents" id="LxU-AM-dVS"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="dateTimeLabel" destination="zmb-ae-1Id" id="xEc-Jx-9qy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ESU-qX-1SD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="155.07246376811597" y="107.8125"/>
+        </scene>
+        <!--PopupStoryboard-->
+        <scene sceneID="JBR-6j-bsM">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PopupStoryboard" id="3sn-FM-h4v" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mYj-ag-hlS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="695" y="24"/>
+        </scene>
+        <!--ClosureStoryboard-->
+        <scene sceneID="fHR-Y0-x5S">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ClosureStoryboard" id="U5M-4l-sda" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cdp-PB-2V6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="801" y="185"/>
+        </scene>
+    </scenes>
+</document>
